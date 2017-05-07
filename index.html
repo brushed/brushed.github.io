@@ -70,21 +70,40 @@ def fib(n: Int): Int = n match {
 
 
 <div>
+  <!--
   <v-alert success v-bind:value="true">
     This is a success alert.
   </v-alert>
+  -->
+  <div class="alert alert--success"><i class="material-icons icon alert__icon">check_circle</i><div>
+    This is a success alert.
+  </div></div>
 
+  <!--
   <v-alert info v-bind:value="true">
     This is a info alert.
   </v-alert>
+  -->
+  <div class="alert alert--info"><i class="material-icons icon alert__icon">info</i><div>
+    This is a info alert.
+  </div></div>
 
+  <!--
   <v-alert warning v-bind:value="true">
     This is a warning alert.
   </v-alert>
-
+  -->
+  <div class="alert alert--warning"><i class="material-icons icon alert__icon">priority_high</i><div>
+    This is a warning alert.
+  </div></div>
+  <!--
   <v-alert error v-bind:value="true">
     This is a error alert.
   </v-alert>
+  -->
+  <div class="alert alert--error"><i class="material-icons icon alert__icon">warning</i><div>
+    This is a error alert.
+  </div></div>
 </div>
 
 <v-btn round primary dark>Rounded Button</v-btn>
