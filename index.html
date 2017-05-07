@@ -11,5 +11,175 @@ body {
 <body>
 <h1>Hello World Again</h1>
 <p>I'm hosted with GitHub Pages.</p>
+
+
+<blockquote> Lorem ipsum dolor sit amet, brute iriure accusata ne mea. Eos suavitate referrentur ad, te duo agam libris qualisque, utroque quaestio accommodare no qui. Et percipit laboramus usu, no invidunt verterem nominati mel. Dolorem ancillae an mei, ut putant invenire splendide mel, ea nec propriae adipisci. Ignota salutandi accusamus in sed, et per malis fuisset, qui id ludus appareat.</blockquote>
+
+<div>Example of an inline <code><code></code> element.</div>
+
+<pre>
+def fib(n: Int): Int = n match {
+  case 0 | 1  => n
+  case _      => fib(n-1) + fib(n-2)
+}
+</pre>
+
+
+* item1
+* item2
+
+
+<v-app id="example-2" left-fixed-sidebar>
+  <v-toolbar>
+    <v-toolbar-side-icon @click.native.stop="nav2 = !nav2" />
+    <v-toolbar-logo>Toolbar</v-toolbar-logo>
+  </v-toolbar>
+  <main>
+    <v-sidebar left fixed drawer v-model="nav2">
+      <v-list>
+        <v-list-item v-for="i in 3" :key="i">
+          <v-list-tile>
+            <v-list-tile-title>Item {{ i }}</v-list-tile-title>
+          </v-list-tile>
+        </v-list-item>
+      </v-list>
+    </v-sidebar>
+    <v-content>
+      <v-container fluid>
+        <div class="title">Main Content</div>
+      </v-container>
+    </v-content>
+  </main>
+  <v-footer>Footer</v-footer>
+</v-app>
+
+
+<div>
+  <v-alert success v-bind:value="true">
+    This is a success alert.
+  </v-alert>
+
+  <v-alert info v-bind:value="true">
+    This is a info alert.
+  </v-alert>
+
+  <v-alert warning v-bind:value="true">
+    This is a warning alert.
+  </v-alert>
+
+  <v-alert error v-bind:value="true">
+    This is a error alert.
+  </v-alert>
+</div>
+
+<v-btn round primary dark>Rounded Button</v-btn>
+
+
+<v-btn warning dark>Normal Button</v-btn>
+
+
+<div>
+  <v-card>
+    <v-card-text>
+      <div>{{ card_text }}</div>
+    </v-card-text>
+  </v-card>
+
+  <v-card class="blue darken-1 white--text">
+    <v-card-text>
+      <div>{{ card_text }}</div>
+    </v-card-text>
+  </v-card>
+</div>
+
+<v-expansion-panel>
+  <v-expansion-panel-content v-for="(item,i) in 5" :key="i">
+    <div slot="header">Item</div>
+    <v-card>
+      <v-card-text class="grey lighten-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</v-card-text>
+    </v-card>
+  </v-expansion-panel-content>
+</v-expansion-panel>
+
+
+<v-menu offset-y>
+  <v-btn primary dark slot="activator">Dropdown</v-btn>
+  <v-list>
+    <v-list-item v-for="item in items" :key="item">
+      <v-list-tile>
+        <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+      </v-list-tile>
+    </v-list-item>
+  </v-list>
+</v-menu>
+
+<div>
+  <v-progress-circular v-bind:value="20" />
+
+  <v-progress-circular v-bind:value="40" />
+
+  <v-progress-circular v-bind:value="60" />
+
+  <v-progress-circular v-bind:value="80" />
+
+  <v-progress-circular v-bind:value="100" />
+</div>
+
+
+
+<v-card class="grey lighten-4 elevation-0">
+  <v-card-text>
+    <v-container fluid>
+      <v-row>
+        <v-col xs12 sm12 md3>
+          <v-switch label="Success" v-model="ex17" value="success" success light hide-details />
+        </v-col>
+        <v-col xs12 sm12 md3>
+          <v-switch label="Info" v-model="ex17" value="info" info light hide-details />
+        </v-col>
+        <v-col xs12 sm12 md3>
+          <v-switch label="Warning" v-model="ex17" value="warning" warning light hide-details />
+        </v-col>
+        <v-col xs12 sm12 md3>
+          <v-switch label="Error" v-model="ex17" value="error" error light hide-details />
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-card-text>
+</v-card>
+
+
+<v-tabs id="mobile-tabs-3" grow>
+  <v-tab-item
+    v-for="i in 3" :key="i"
+    v-bind:href="'#mobile-tabs-3-' + i"
+    slot="activators"
+  >
+    Item {{ i }}
+  </v-tab-item>
+  <v-tab-content
+    v-for="i in 3" :key="i"
+    v-bind:id="'mobile-tabs-3-' + i"
+    slot="content"
+  >
+    <v-card>
+      <v-card-text>{{ text }}</v-card-text>
+    </v-card>
+  </v-tab-content>
+</v-tabs>
+
+
+<div class="text-xs-center">
+  <v-btn v-tooltip:top="{ html: 'Top tooptip' }" class="primary white--text">Top</v-btn>
+
+  <v-btn v-tooltip:right="{ html: 'Right tooptip' }" class="primary white--text">Right</v-btn>
+
+  <v-btn v-tooltip:bottom="{ html: 'Bottom tooptip' }" class="primary white--text">Bottom</v-btn>
+
+  <v-btn v-tooltip:left="{ html: 'Left Tooltip' }" class="primary white--text">Left</v-btn>
+</div>
+
+
+
 </body>
 </html>
