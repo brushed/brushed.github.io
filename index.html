@@ -185,13 +185,30 @@ def fib(n: Int): Int = n match {
 
 
 <div class="text-xs-center">
+  <!--
   <v-btn v-tooltip:top="{ html: 'Top tooptip' }" class="primary white--text">Top</v-btn>
-
+  -->
+  <button type="button" class="primary white--text btn btn--raised" data-tooltip="Top tooptip" data-tooltip-location="top">
+    <span class="btn__content">Top</span>
+  </button>
+  <!--
   <v-btn v-tooltip:right="{ html: 'Right tooptip' }" class="primary white--text">Right</v-btn>
-
+  -->
+  <button type="button" class="primary white--text btn btn--raised" data-tooltip="Right tooptip" data-tooltip-location="right">
+    <span class="btn__content">Right</span>
+  </button>
+  <!--
   <v-btn v-tooltip:bottom="{ html: 'Bottom tooptip' }" class="primary white--text">Bottom</v-btn>
-
+  -->
+  <button type="button" class="primary white--text btn btn--raised" data-tooltip="Bottom tooptip" data-tooltip-location="bottom">
+    <span class="btn__content">Bottom</span>
+  </button>
+  <!--
   <v-btn v-tooltip:left="{ html: 'Left Tooltip' }" class="primary white--text">Left</v-btn>
+  -->
+  <button type="button" class="primary white--text btn btn--raised" data-tooltip="Left Tooltip" data-tooltip-location="left">
+    <span class="btn__content">Left</span>
+  </button>
 </div>
 
 
